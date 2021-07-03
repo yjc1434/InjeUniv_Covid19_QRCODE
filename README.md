@@ -1,3 +1,3 @@
 # InjeUniv_Covid19_QRCODE
 Version: 1.2.4
-URL: https://1drv.ms/u/s!Aut-MjTs79yGn175YaitPtCb2QaE?e=D5he5s
+URL: https://github.com/yjc1434/InjeUniv_Covid19_QRCODE/blob/main/com.injeuniv.yjc.qrcode_1.2.4.apk
