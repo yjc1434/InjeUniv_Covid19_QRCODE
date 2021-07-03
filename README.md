@@ -1,0 +1,1 @@
+# InjeUniv_Covid19_QRCODE
