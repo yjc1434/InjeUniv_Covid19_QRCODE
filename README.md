@@ -1,3 +1,3 @@
 # InjeUniv_Covid19_QRCODE
-Version: 1.2.8
-URL: https://drive.google.com/file/d/1aiWRhryEXPmqDpVDL4OHRI_KXE3eL-bL/view?usp=sharing
+Version: 1.3
+URL: https://drive.google.com/file/d/130FbNRGWwQkT0pEWW2mRAk-d9RtGergE/view?usp=sharing
