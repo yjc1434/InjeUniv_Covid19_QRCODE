@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/bluebutton"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="자가진단 결과"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/normalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/circleView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:srcCompat="@drawable/mon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:gravity="bottom|clip_horizontal|center|clip_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="등교가능"
+                            android:textColor="@color/white"
+                            android:textSize="35dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/newDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="2021.01.01"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/qrView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        tools:srcCompat="@drawable/qrcode_sample" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:paddingLeft="5dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="소속"
+                                android:textColor="@color/text"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/result_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15dp"
+                                android:layout_weight="2"
+                                android:singleLine="true"
+                                android:text="BNIT융합대학 바이오테크놀리지학부"
+                                android:textColor="@color/text" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="개인번호"
+                                android:textColor="@color/text"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/result_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15dp"
+                                android:layout_weight="2"
+                                android:text="20210001"
+                                android:textColor="@color/text" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="성명"
+                                android:textColor="@color/text"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/result_3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15dp"
+                                android:layout_weight="2"
+                                android:text="홍길동"
+                                android:textColor="@color/text" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bigLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="clip_horizontal|center|center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/bigQR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    app:srcCompat="@drawable/qrcode_sample" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/result_qr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bluebutton"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="전자출입확인(QR코드 카메라)"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp">
+
+                    <Button
+                        android:id="@+id/result_retry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/bluebutton"
+                        android:text="재진단"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/result_exit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/gray"
+                        android:text="설정"
+                        android:textColor="@color/text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/result_update"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom|center"
+                android:text="업데이트가 존재합니다.\n(설정에서 업데이트 다운로드 가능)"
+                android:textColor="#FF0000"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

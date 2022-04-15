@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="로그인 정보">
+        <Preference
+            app:key="IDinfo"
+            app:summary="20210101"
+            app:title="사용자 ID" />
+        <Preference
+            app:key="logout"
+            app:title="로그아웃" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="편의 기능">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="superagree"
+            android:title="동의 화면 표시 안함"
+            app:summary="동의 화면을 표시하지 않습니다." />
+        <SwitchPreference
+            app:defaultValue="false"
+            app:enabled="false"
+            app:key="autocheck"
+            app:summary="자가진단 시 자동으로 '모두 해당 없음'이 선택됩니다.\n(자동 로그인 사용 시 사용가능)"
+            android:title="증상 자동 선택" />
+        <SwitchPreference
+            android:title="결과화면 바로보기"
+            app:defaultValue="true"
+            app:enabled="false"
+            app:key="quickqr"
+            app:summary="로그인 없이 바로 결과화면을 표시합니다.\n(자동 로그인 사용 시 사용가능)" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="알림">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="notion"
+            android:title="알림창에 표시하기"
+            app:enabled="false"
+            app:summary="알림창에서 애플리케이션을 켤 수 있습니다.\n(자동 로그인 시 사용가능)" />
+        <Preference
+            android:title="세부 설정하기"
+            app:dependency="notion"
+            app:key="alarm_time"
+            app:summary="알림표시에 대한 세부 설정을 할 수 있습니다." />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="기타">
+        <ListPreference
+            android:key="darkmode"
+            android:title="화면 스타일 설정"
+            app:defaultValue="0"
+            app:entries="@array/pref_darkmode"
+            app:entryValues="@array/pref_darkmode_value"
+            app:summary="라이트모드 · 다크모드를 설정합니다." />
+        <Preference
+            app:key="Appinfo"
+            app:summary="업데이트 확인 중 입니다."
+            android:title="업데이트 확인" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="알림 유형 선택">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/pref_noti"
+            android:entryValues="@array/pref_noti_value"
+            android:key="noti_style"
+            android:title="알림 유형 선택하기"
+            android:summary="실행 시 표시"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="실행 시 표시하기">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="touch_kill"
+            android:title="알림 터치 시 사라짐"
+            app:enabled="false"
+            app:summary="알림을 터치하면 사라지는지 설정합니다." />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="특정 시간에만 알림 표시하기" app:isPreferenceVisible="false">
+        <MultiSelectListPreference
+            app:defaultValue="@array/pref_time_default_value"
+            app:entries="@array/pref_time"
+            app:entryValues="@array/pref_time_value"
+            app:key="time_days"
+            app:title="요일"
+            app:enabled="false"/>
+        <Preference
+            app:key="time_Start"
+            app:summary="오전 09시 00분"
+            app:title="시작 시간"
+            app:enabled="false"/>
+        <Preference
+            app:key="time_End"
+            app:summary="오후 06시 00분"
+            app:title="종료 시간"
+            app:enabled="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
