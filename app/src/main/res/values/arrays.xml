@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_darkmode">
+        <item>"기기 설정"</item>
+        <item>"라이트 모드"</item>
+        <item>"다크 모드"</item>
+    </array>
+    <array name="pref_darkmode_value">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+    </array>
+    <array name="pref_time">
+        <item>"일"</item>
+        <item>"월"</item>
+        <item>"화"</item>
+        <item>"수"</item>
+        <item>"목"</item>
+        <item>"금"</item>
+        <item>"토"</item>
+    </array>
+    <array name="pref_time_value">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+    </array>
+    <array name="pref_time_default_value">
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+    </array>
+    <array name="pref_noti">
+        <item>"실행 시 표시"</item>
+        <item>"항상 표시"</item>
+    </array>
+    <array name="pref_noti_value">
+        <item>"0"</item>
+        <item>"2"</item>
+    </array>
+</resources>
